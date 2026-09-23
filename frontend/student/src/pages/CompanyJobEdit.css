@@ -1,0 +1,375 @@
+/* =========================================
+   COMPANY JOB EDIT PAGE
+========================================= */
+
+.company-job-edit-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(79, 70, 229, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(37, 99, 235, 0.07),
+            transparent 28%
+        ),
+        #f8fafc;
+    color: #111827;
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.company-job-edit-topbar {
+    height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.company-edit-back {
+    border: 0;
+    background: transparent;
+    color: #4f46e5;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: 0.2s ease;
+}
+
+.company-edit-back:hover {
+    color: #3730a3;
+    transform: translateX(-3px);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.company-edit-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.company-edit-logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #2563eb
+    );
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.2);
+}
+
+.company-edit-brand h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.1;
+    color: #111827;
+}
+
+.company-edit-brand h2 span {
+    color: #4f46e5;
+}
+
+.company-edit-brand p {
+    margin: 4px 0 0;
+    color: #667085;
+    font-size: 12px;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.company-job-edit-container {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+    padding: 52px 0 70px;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.company-edit-heading {
+    margin-bottom: 26px;
+}
+
+.company-edit-heading span {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+}
+
+.company-edit-heading h1 {
+    margin: 14px 0 7px;
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #111827;
+}
+
+.company-edit-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 15px;
+}
+
+/* =========================================
+   ALERTS
+========================================= */
+
+.company-edit-error,
+.company-edit-success {
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.company-edit-error {
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    color: #be123c;
+}
+
+.company-edit-success {
+    background: #ecfdf3;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.company-job-edit-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================
+   FIELD
+========================================= */
+
+.company-edit-field {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.company-edit-field.full {
+    grid-column: 1 / -1;
+}
+
+.company-edit-field label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #344054;
+}
+
+.company-edit-field input,
+.company-edit-field select,
+.company-edit-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #101828;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.company-edit-field input,
+.company-edit-field select {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.company-edit-field textarea {
+    min-height: 155px;
+    padding: 13px 14px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.company-edit-field input::placeholder,
+.company-edit-field textarea::placeholder {
+    color: #98a2b3;
+}
+
+.company-edit-field input:focus,
+.company-edit-field select:focus,
+.company-edit-field textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    background: #ffffff;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.company-edit-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 8px;
+    margin-top: 2px;
+    border-top: 1px solid #eef0f4;
+}
+
+.company-edit-cancel,
+.company-edit-save {
+    min-height: 46px;
+    padding: 0 20px;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.company-edit-cancel {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054;
+}
+
+.company-edit-cancel:hover {
+    background: #f8fafc;
+    border-color: #bfc5d1;
+}
+
+.company-edit-save {
+    border: 0;
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #2563eb
+    );
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.18);
+}
+
+.company-edit-save:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.24);
+}
+
+.company-edit-save:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.company-job-edit-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #667085;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+    .company-job-edit-topbar {
+        padding: 0 5%;
+    }
+
+    .company-edit-brand {
+        display: none;
+    }
+
+    .company-job-edit-container {
+        width: 90%;
+        padding-top: 38px;
+    }
+
+    .company-job-edit-form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .company-edit-field.full {
+        grid-column: auto;
+    }
+
+    .company-edit-actions {
+        grid-column: auto;
+        justify-content: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .company-edit-cancel,
+    .company-edit-save {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .company-job-edit-topbar {
+        height: 72px;
+    }
+
+    .company-edit-heading h1 {
+        font-size: 30px;
+    }
+
+    .company-job-edit-form {
+        padding: 18px;
+    }
+
+    .company-edit-field input,
+    .company-edit-field select {
+        height: 46px;
+    }
+}

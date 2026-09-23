@@ -1,0 +1,539 @@
+* {
+    box-sizing: border-box;
+}
+
+.company-applicants-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(79, 70, 229, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(37, 99, 235, 0.07),
+            transparent 30%
+        ),
+        #f8fafc;
+    color: #111827;
+}
+
+/* TOP BAR */
+
+.applicants-topbar {
+    min-height: 76px;
+    padding: 14px 6%;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.applicants-back-btn,
+.refresh-applicants-btn {
+    border: none;
+    background: transparent;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.refresh-applicants-btn {
+    padding: 10px 14px;
+    border-radius: 9px;
+    background: #eef2ff;
+}
+
+.applicants-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.applicants-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #2563eb
+    );
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.applicants-brand h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.applicants-brand h2 span {
+    color: #4f46e5;
+}
+
+.applicants-brand p {
+    margin: 1px 0 0;
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* CONTAINER */
+
+.applicants-container {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 45px 0 70px;
+}
+
+/* HEADER */
+
+.applicants-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.applicants-badge {
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 6px 10px;
+    border-radius: 20px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.applicants-header h1 {
+    margin: 0 0 8px;
+    font-size: 38px;
+}
+
+.applicants-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.applicant-count-card {
+    min-width: 120px;
+    padding: 17px 20px;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.applicant-count-card strong {
+    display: block;
+    color: #4f46e5;
+    font-size: 27px;
+}
+
+.applicant-count-card span {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* APPLICANT CARD */
+
+.applicants-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.applicant-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+/* HEADER */
+
+.applicant-card-header {
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.student-profile {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.student-avatar {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #dbeafe
+    );
+
+    color: #4f46e5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.student-profile h2 {
+    margin: 0 0 4px;
+    font-size: 18px;
+}
+
+.student-profile p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* STATUS */
+
+.application-status {
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.status-shortlisted {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.status-rejected {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* DETAILS */
+
+.student-details-grid {
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.student-detail {
+    padding: 13px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.student-detail span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.student-detail strong {
+    display: block;
+
+    color: #334155;
+    font-size: 12px;
+
+    word-break: break-word;
+}
+
+/* SKILLS */
+
+.student-skills-section {
+    padding: 0 20px 20px;
+}
+
+.student-skills-section h3 {
+    margin: 0 0 10px;
+    font-size: 13px;
+}
+
+.student-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.student-skills span {
+    padding: 6px 9px;
+    border-radius: 7px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* FOOTER */
+
+.applicant-card-footer {
+    padding: 15px 20px;
+
+    border-top: 1px solid #eef2f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 9px 12px;
+    border-radius: 8px;
+
+    background: #f1f5f9;
+    color: #334155;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.no-resume {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.applicant-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.applicant-actions button {
+    border: none;
+    border-radius: 8px;
+
+    padding: 9px 13px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.applicant-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.shortlist-btn {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.reject-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* EMPTY */
+
+.no-applicants {
+    padding: 70px 20px;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.no-applicants-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.no-applicants h2 {
+    margin: 0 0 8px;
+}
+
+.no-applicants p {
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+.no-applicants button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 17px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #2563eb
+    );
+
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ERROR */
+
+.applicants-error {
+    padding: 22px;
+
+    border: 1px solid #fecaca;
+    background: #fef2f2;
+    border-radius: 14px;
+
+    color: #991b1b;
+}
+
+.applicants-error p {
+    margin: 6px 0 15px;
+}
+
+.applicants-error button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 14px;
+
+    background: #dc2626;
+    color: white;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* LOADING */
+
+.applicants-loading {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #64748b;
+}
+
+.applicants-spinner {
+    width: 35px;
+    height: 35px;
+
+    border: 3px solid #e5e7eb;
+    border-top-color: #4f46e5;
+
+    border-radius: 50%;
+
+    animation: applicants-spin 0.7s linear infinite;
+
+    margin-bottom: 12px;
+}
+
+@keyframes applicants-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    .applicants-brand {
+        display: none;
+    }
+
+    .applicants-container {
+        padding-top: 30px;
+    }
+
+    .applicants-header {
+        align-items: flex-start;
+    }
+
+    .applicants-header h1 {
+        font-size: 30px;
+    }
+
+    .student-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .applicants-header {
+        flex-direction: column;
+    }
+
+    .applicant-count-card {
+        width: 100%;
+    }
+
+    .applicant-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .applicant-card-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .applicant-actions {
+        width: 100%;
+    }
+
+    .applicant-actions button {
+        flex: 1;
+    }
+}
