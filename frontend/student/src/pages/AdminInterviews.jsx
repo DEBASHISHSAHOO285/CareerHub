@@ -69,7 +69,7 @@ const AdminInterviews = () => {
         localStorage.removeItem("adminToken");
         localStorage.removeItem("adminUser");
 
-        navigate("/admin/login");
+        navigate("/");
     };
 
     let adminUser = {};
